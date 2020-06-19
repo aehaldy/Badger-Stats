@@ -2,6 +2,6 @@ from flask import Flask
 
 app = Flask(__name__)
 
-@app.route('/')
+@app.route('/uwm')
 def get_stats():
-  return 'Hello stats!'
+  return 'Welcome to University of Wisonsin, Madison, STATS!n'
