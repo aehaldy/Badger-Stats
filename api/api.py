@@ -16,5 +16,5 @@ def get_uwm_stats():
       return data
 
     except Exception as e:
-        print('Failed to GET data from API')
-        return(str(e))
+      print('Failed to GET data from API')
+      return(str(e))

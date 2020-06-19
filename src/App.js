@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import logo from './logo.svg';
-import './App.css';
+//import logo from './logo.svg';
+//import './App.css';
 
 function App() {
   const [schoolName, setSchoolName] = useState(null);
@@ -39,7 +39,7 @@ function App() {
     //API request takes a min, so show a loading gif or something
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+        {/* <img src={logo} className="App-logo" alt="logo" /> */}
         <p>{schoolName} "{schoolAlias}"</p>
         <a href={`http://${schoolUrl}`}>{schoolUrl}</a>
         <p> {city}, {state} {zip}</p>
