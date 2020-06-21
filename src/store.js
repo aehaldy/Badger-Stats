@@ -1,7 +1,7 @@
 import { createStore, applyMiddleware } from 'redux';
-//import axios from 'axios';
 import loggingMiddleware from 'redux-logger';
 import thunkMiddleware from 'redux-thunk';
+import {parseData} from './nivoParser'
 
 const initialState = {
   school: {
@@ -21,7 +21,7 @@ const initialState = {
 };
 
 const GOT_SCHOOL = 'GOT_SCHOOL';
-const GOT_LATEST = 'GOT_LATEST';
+// const GOT_LATEST = 'GOT_LATEST';
 
 const setSchool = (school, latest) => ({
   type: GOT_SCHOOL,
@@ -34,7 +34,6 @@ export const fetchSchool = () => {
     //fetch data from Flask API
     const res = await fetch('/api/school');
     const data = await res.json();
-    console.log('Thunk got School?', data);
 
     const {name, alias, school_url, city, state, zip} = data.results[0].school;
     const school = {
@@ -49,10 +48,9 @@ export const fetchSchool = () => {
     const stats = data.results[0].latest;
     const undergraduates = stats.student.enrollment.undergrad_12_month;
     const graduates = stats.student.enrollment.grad_12_month;
-    const programs = stats.academics.program_percentage;
+    const programs = parseData(stats.academics.program_percentage);
     const totalEnrollment = undergraduates + graduates;
     const raceEthnicity = stats.student.demographics.race_ethnicity;
-
 
     const latest = {
       totalEnrollment,
@@ -79,9 +77,9 @@ export const fetchSchool = () => {
 const reducer = (state = initialState, action) => {
   switch (action.type) {
     case GOT_SCHOOL:
-      return { ...state, school: action.school };
-    case GOT_LATEST:
-      return { ...state, latest: action.latest };
+      return { ...state, school: action.school, latest: action.latest };
+    // case GOT_LATEST:
+    //   return { ...state, latest: action.latest };
     default:
       return state;
   }

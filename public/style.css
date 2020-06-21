@@ -1,5 +1,7 @@
 body {
+  background-color: #4F6D7A;
   margin: 0;
+  padding: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
@@ -7,7 +9,130 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+header {
+  box-sizing: border-box;
+  background-color: #E8DAB2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.26);
+}
+
+.app {
+  color: #E8DAB2;
+  text-align: center
+}
+
+#currentSchool {
+  /* color: #C0D6DF; */
+  font-weight: bolder;
+  font-size: smaller;
+  padding-bottom: 2px;
+  margin: 0;
+}
+
+.address {
+  padding: 3;
+  margin: 0;
+}
+
+.schoolInfo {
+  margin-top: 12px;
+  display: inline-block
+}
+
+a {
+  color: #990b0e;
+  font-style: italic;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #ed2a2d;
+  text-decoration: underline;
+}
+
+.headerbtn {
+  font-weight: 500;
+  font-size: 17px;
+  color: #4F6D7A;
+  text-decoration: none;
+  border: none;
+  padding: 15px;
+  margin: 0;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.headerbtn:hover {
+  color: #C6181C;
+}
+
+.dropbtn {
+  background-color: Transparent;
+}
+
+.logo {
+  padding: 1px;
+  padding-top: 3px;
+  padding-left: 12px;
+  display: block;
+  max-width: 200%;
+  max-height: 4.5rem;
+}
+
+.dropdown {
+  margin-left: 200px;
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  right: 0;
+  display: none;
+  position: absolute;
+  background-color: #C0D6DF;
+  color: #4F6D7A;
+  text-align: left;
+  padding: 12px 16px;
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+  text-decoration: none;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.28);
+  z-index: 5;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: #C0D6DF;
+}
+
+.centeringContainer {
+  align-items: center;
+}
+
+.chartSlide {
+  width: 90%;
+  margin: auto;
+  border-radius: 5px; /* 5px rounded corners */
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  background-color: #EAEAEA;
+  color: #2e3f46;
+}
+
+.container {
+  padding: 4px;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+#pie {
+    height: 440px;
 }
