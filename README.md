@@ -32,7 +32,7 @@ You should now be in the virual environment (you can see `(venv)` at the beginni
 (venv) api$ pip3 install -r ../requirements.txt
 ```
 
-In Windows, you can just used the pip command.
+In Windows, you can just use the pip command.
 
 The project is configured to use a .flaskenv file for environmental variables. Inside the `/api` directory, create a file called '.flaskenv' and add these lines:
 
