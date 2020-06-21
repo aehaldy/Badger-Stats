@@ -14,9 +14,9 @@ const initialState = {
   },
   latest: {
     totalEnrollment: null,
-    programs: {},
-    raceEthnicity: {},
-    //male & female earnings & debt over 5 years?
+    programs: [],
+    raceEthnicity: [],
+    incomeBrackets: [],
   },
 };
 
@@ -51,11 +51,26 @@ export const fetchSchool = () => {
     const totalEnrollment = undergraduates + graduates;
     const programs = parseData(stats.academics.program_percentage);
     const raceEthnicity = parseData(stats.student.demographics.race_ethnicity);
+    const lowIncome = stats.student.share_lowIncome;
+    const lowMidIncome = stats.student.share_middleincome['30001_48000'];
+    const highMidIncome = stats.student.share_middleincome['48001_75000'];
+    const midHighIncome = stats.student.share_highincome['75001_110000'];
+    const highIncome = stats.student.share_highincome['110001plus'];
+    const incomes = {
+      '$0-30,000': lowIncome,
+      '$30,001-48,000': lowMidIncome,
+      '$48,001-75,000': highMidIncome,
+      '$75,001-110,000': midHighIncome,
+      '$110,001-plus': highIncome,
+    };
+    const incomeBrackets = parseData(incomes);
+    console.log('Here is my income data:', incomeBrackets)
 
     const latest = {
       totalEnrollment,
       programs,
       raceEthnicity,
+      incomeBrackets,
     };
 
     dispatch(setSchool(school, latest));
