@@ -1,7 +1,6 @@
-import React, { useEffect } from 'react';
-// import { useDispatch, useSelector } from 'react-redux';
-// import { fetchSchool } from './store';
+import React from 'react'
 import {Programs} from './programs'
+import {Demographics} from './demographics'
 
 export const Dashboard = () => {
 
@@ -9,6 +8,7 @@ export const Dashboard = () => {
     <div>
       <h5>I am a big ol dashboard!</h5>
       <Programs />
+      <Demographics />
     </div>
   )
 };

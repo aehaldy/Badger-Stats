@@ -32,12 +32,12 @@ header {
 }
 
 .address {
-  padding: 3;
+  padding: 1px;
   margin: 0;
 }
 
 .schoolInfo {
-  margin-top: 12px;
+  margin-top: 24px;
   display: inline-block
 }
 
@@ -117,8 +117,9 @@ a:hover {
 
 .chartSlide {
   width: 95%;
-  max-width: 800px;
+  max-width: 600px;
   margin: auto;
+  margin-top: 24px;
   border-radius: 5px; /* 5px rounded corners */
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   background-color: #EAEAEA;

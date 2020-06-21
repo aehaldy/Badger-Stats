@@ -48,9 +48,9 @@ export const fetchSchool = () => {
     const stats = data.results[0].latest;
     const undergraduates = stats.student.enrollment.undergrad_12_month;
     const graduates = stats.student.enrollment.grad_12_month;
-    const programs = parseData(stats.academics.program_percentage);
     const totalEnrollment = undergraduates + graduates;
-    const raceEthnicity = stats.student.demographics.race_ethnicity;
+    const programs = parseData(stats.academics.program_percentage);
+    const raceEthnicity = parseData(stats.student.demographics.race_ethnicity);
 
     const latest = {
       totalEnrollment,
