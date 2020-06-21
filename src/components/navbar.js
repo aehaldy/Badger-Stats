@@ -1,6 +1,6 @@
 import React from 'react'
-import {exportPDF} from './exportPDF'
-import {printCharts} from './printCharts'
+import {exportPDF} from '../exportPDF'
+import {printCharts} from '../printCharts'
 
 
 export const Navbar = ({appFromId}) => {
@@ -47,7 +47,7 @@ export const Navbar = ({appFromId}) => {
           </button>
           <iframe
             id="charts"
-            src="/src/documentCharts.js"
+            src="./documentCharts"
             style={{ display: 'none' }}
             title="Charts"
           />

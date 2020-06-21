@@ -3,8 +3,8 @@ import { useDispatch, useSelector } from 'react-redux';
 import { fetchStats } from './store';
 
 //Components
-import {Navbar} from './navbar'
-import {Dashboard} from './dashboard'
+import {Navbar} from './components/navbar'
+import { Dashboard } from './components/dashboard';
 
 function App() {
   const { name, alias, schoolUrl, city, state, zip } = useSelector(state => state.school);
