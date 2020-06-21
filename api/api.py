@@ -27,3 +27,6 @@ def get_school():
   except Exception as e:
     print('Failed to GET data from API')
     return(str(e))
+
+if __name__ == '__main__':
+    app.run(host='0.0.0.0', debug=False, port=os.environ.get('PORT', 80))
