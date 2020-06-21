@@ -9,7 +9,7 @@ export const Demographics = () => {
 
   return (
     <div className="centeringContainer chartSlide" id="demographics">
-      {raceData.keys && (
+      {raceData.keys && elementFromId && (
         <Pie
           data={raceData}
           chartTitle="Race & Ethnicity Percentages"

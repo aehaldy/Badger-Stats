@@ -18,20 +18,8 @@ function App() {
   return (
     //If API request is slow, show a loading gif
     <div className="app" id="printAll">
-      <Navbar appFromId={document.getElementById('printAll')} />
+      <Navbar schoolData={{ name, alias, schoolUrl, city, state, zip, enrollment }} />
       <Dashboard />
-      <div className="schoolInfo">
-        <p id="currentSchool">From student population of {enrollment} at:</p>
-        <p className="address">
-          {name} {alias && alias}
-        </p>
-        <p className="address">
-          {city}, {state} {zip}
-        </p>
-        <a href={`http://${schoolUrl}`} id="schoolUrl">
-          {schoolUrl}
-        </a>
-      </div>
     </div>
   );
 }
