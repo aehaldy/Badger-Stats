@@ -20,16 +20,15 @@ const initialState = {
   },
 };
 
-const GOT_SCHOOL = 'GOT_SCHOOL';
-// const GOT_LATEST = 'GOT_LATEST';
+const GOT_STATS = 'GOT_STATS';
 
-const setSchool = (school, latest) => ({
-  type: GOT_SCHOOL,
+const setStats = (school, latest) => ({
+  type: GOT_STATS,
   school,
   latest,
 });
 
-export const fetchSchool = () => {
+export const fetchStats = () => {
   return async (dispatch) => {
     //fetch data from Flask API
     const res = await fetch('/api/school');
@@ -64,7 +63,6 @@ export const fetchSchool = () => {
       '$110,001-plus': highIncome,
     };
     const incomeBrackets = parseData(incomes);
-    console.log('Here is my income data:', incomeBrackets)
 
     const latest = {
       totalEnrollment,
@@ -73,28 +71,14 @@ export const fetchSchool = () => {
       incomeBrackets,
     };
 
-    dispatch(setSchool(school, latest));
+    dispatch(setStats(school, latest));
   };
 };
 
-// export const fetchLatest = () => {
-//   return async (dispatch) => {
-//     //fetch data from Flask API
-//     const res = await fetch('/api/latest');
-//     const data = await res.json();
-//     console.log('Got Latest?', data);
-
-//     //set latest stats from data
-//     dispatch(setLatest(latest));
-//   }
-// }
-
 const reducer = (state = initialState, action) => {
   switch (action.type) {
-    case GOT_SCHOOL:
+    case GOT_STATS:
       return { ...state, school: action.school, latest: action.latest };
-    // case GOT_LATEST:
-    //   return { ...state, latest: action.latest };
     default:
       return state;
   }

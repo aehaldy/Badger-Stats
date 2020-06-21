@@ -1,10 +1,12 @@
-import React from 'react'
+import React from 'react';
 import {Programs} from './programs'
 import {Demographics} from './demographics'
 import {Incomes} from './incomeLvls'
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 
+// The responsive options are not yet fully integrated
+// but this serves as a placeholder for future possibilities:
 const responsive = {
   desktop: {
     breakpoint: { max: 3000, min: 1024 },
@@ -12,19 +14,18 @@ const responsive = {
     slidesToSlide: 3, // optional, default to 1.
   },
   tablet: {
-    breakpoint: { max: 1024, min: 464 },
+    breakpoint: { max: 1124, min: 850 },
     items: 2,
     slidesToSlide: 2, // optional, default to 1.
   },
   mobile: {
-    breakpoint: { max: 464, min: 0 },
+    breakpoint: { max: 850, min: 350 },
     items: 1,
     slidesToSlide: 1, // optional, default to 1.
   },
 };
 
 export const Dashboard = () => {
-
   return (
     <Carousel
       swipeable={true}

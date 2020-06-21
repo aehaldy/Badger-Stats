@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchSchool } from './store';
+import { fetchStats } from './store';
 
 //Components
 import {Navbar} from './navbar'
@@ -12,13 +12,13 @@ function App() {
   const dispatch = useDispatch();
 
   useEffect( () => {
-   dispatch(fetchSchool());
+   dispatch(fetchStats());
   }, [dispatch]);
 
   return (
     //If API request is slow, show a loading gif
-    <div className="app">
-      <Navbar />
+    <div className="app" id="printAll">
+      <Navbar appFromId={document.getElementById('printAll')} />
       <Dashboard />
       <div className="schoolInfo">
         <p id="currentSchool">From student population of {enrollment} at:</p>

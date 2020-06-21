@@ -53,6 +53,7 @@ a:hover {
 }
 
 .headerbtn {
+  background-color: Transparent;
   font-weight: 500;
   font-size: 17px;
   color: #4F6D7A;
@@ -66,10 +67,6 @@ a:hover {
 
 .headerbtn:hover {
   color: #C6181C;
-}
-
-.dropbtn {
-  background-color: Transparent;
 }
 
 .logo {
