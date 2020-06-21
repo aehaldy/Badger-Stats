@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "description": "A data-visualization page for university public API data.",
   "repository": "https://github.com/aehaldy/Badger-Stats",
+  "homepage": "https://hidden-badger.herokuapp.com/",
   "license": "MIT",
   "main": "index.js",
   "dependencies": {

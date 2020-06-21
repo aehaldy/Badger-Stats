@@ -6,13 +6,9 @@ Badger-Stats is a data visualization page to display some of the most recent dat
 
 This project requires Python3, Yarn, and Flask to run.
 
-### Data
-
-This project uses public federal data from College Scorecard at https://api.data.gov/ed/collegescorecard/v1/schools/
-
 ## Tech Stack
 
-This project was rapidly developed using several existing libraries. The main frameworks are React for the frontend and Flask for the backend. But in addition, I want to give special thanks to:
+This project was rapidly developed using several existing libraries. The main frameworks are React for the frontend with Redux for state management, and Flask for the backend. But in addition, I want to give special thanks to:
 
 Nivo -- Data visualization library for React
 
@@ -22,3 +18,6 @@ React-CSV -- For turning JavaScript data into a CSV for download
 
 jsPDF -- For easily downloading PDFs from the web
 
+### Data
+
+This project uses public federal data from College Scorecard at https://api.data.gov/ed/collegescorecard/v1/schools/
