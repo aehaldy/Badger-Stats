@@ -22,31 +22,40 @@ const responsive = {
     breakpoint: { max: 850, min: 350 },
     items: 1,
     slidesToSlide: 1, // optional, default to 1.
+    partialVisibilityGutter: 10,
   },
 };
 
 export const Dashboard = () => {
   return (
-    <Carousel
-      swipeable={true}
-      draggable={true}
-      showDots={true}
-      responsive={responsive}
-      ssr={false} // means to render carousel on server-side.
-      infinite={true}
-      autoPlay={false}
-      keyBoardControl={true}
-      customTransition="all .5"
-      transitionDuration={500}
-      containerClass="carousel-container"
-      removeArrowOnDeviceType={['tablet', 'mobile']}
-      deviceType={'mobile'}
-      dotListClass="custom-dot-list-style"
-      itemClass="carousel-item-padding-40-px"
+    <div
+      style={{
+        paddingBottom: '30px',
+        position: 'relative',
+      }}
     >
-      <Demographics />
-      <Incomes />
-      <Programs />
-    </Carousel>
+      <Carousel
+        swipeable={true}
+        draggable={true}
+        showDots={true}
+        renderDotsOutside={true}
+        responsive={responsive}
+        ssr={false}
+        infinite={true}
+        autoPlay={false}
+        keyBoardControl={true}
+        customTransition="all .5"
+        transitionDuration={500}
+        containerClass="carousel-container"
+        removeArrowOnDeviceType={['tablet', 'mobile']}
+        deviceType={'mobile'}
+        dotListClass="custom-dot-list-style"
+        itemClass="carousel-item-padding-40-px"
+      >
+        <Demographics />
+        <Incomes />
+        <Programs />
+      </Carousel>
+    </div>
   );
 };
