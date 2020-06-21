@@ -24,7 +24,6 @@ header {
 }
 
 #currentSchool {
-  /* color: #C0D6DF; */
   font-weight: bolder;
   font-size: smaller;
   padding-bottom: 2px;
@@ -43,13 +42,15 @@ header {
 
 a {
   color: #990b0e;
-  font-style: italic;
   text-decoration: none;
+}
+
+#schoolUrl {
+  font-style: italic;
 }
 
 a:hover {
   color: #ed2a2d;
-  text-decoration: underline;
 }
 
 .headerbtn {
@@ -78,14 +79,37 @@ a:hover {
   max-height: 4.5rem;
 }
 
+.dropbtn {
+  background-color: Transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+
+.menuIcon {
+  padding: 12px;
+  max-height: 28px;
+  width: 28px;
+  z-index: 4;
+
+}
+
 .dropdown {
-  margin-left: 200px;
-  position: relative;
   display: inline-block;
 }
 
+.about {
+  position: relative;
+}
+
+.menu {
+  left: -42%;
+  /* position: absolute; */
+  position: relative;
+}
+
 .dropdown-content {
-  right: 0;
+  left: 0;
   display: none;
   position: absolute;
   background-color: #C0D6DF;
@@ -108,6 +132,12 @@ a:hover {
   background-color: #C0D6DF;
 }
 
+@media print {
+  .dropdown-content {
+    display: none;
+  }
+}
+
 .centeringContainer {
   align-items: center;
 }
@@ -117,7 +147,7 @@ a:hover {
   max-width: 600px;
   margin: auto;
   margin-top: 24px;
-  border-radius: 5px; /* 5px rounded corners */
+  border-radius: 5px;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   background-color: #EAEAEA;
   color: #2e3f46;

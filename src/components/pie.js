@@ -1,8 +1,10 @@
 import React from 'react'
 import { ResponsivePieCanvas } from '@nivo/pie'
+import { Menu } from './menu';
 
-export const Pie = ({ data, chartTitle }) => (
+export const Pie = ({ data, chartTitle, elementFromId}) => (
   <div>
+    <Menu data={data} elementFromId={elementFromId}/>
     <div style={{ height: '300px', width: '395px', margin: 'auto' }}>
       <ResponsivePieCanvas
         data={data}

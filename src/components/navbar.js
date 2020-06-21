@@ -1,6 +1,4 @@
 import React from 'react'
-import {exportPDF} from '../exportPDF'
-import {printCharts} from '../printCharts'
 
 
 export const Navbar = ({appFromId}) => {
@@ -14,43 +12,12 @@ export const Navbar = ({appFromId}) => {
           onClick={() => window.location.reload(false)}
         />
       </div>
-      <div className="dropdown">
+      <div className="dropdown about">
         <button className="dropbtn headerbtn" type="button">
-          Menu
+          About
         </button>
         <div className="dropdown-content">
-          <button
-            type="button"
-            className="headerbtn"
-            onClick={() => exportPDF(appFromId)}
-          >
-            Download PDF
-          </button>
-          <button
-            type="button"
-            className="headerbtn"
-            onClick={() => 'exportCSV'}
-          >
-            Download CSV
-          </button>
-          <button
-            type="button"
-            className="headerbtn"
-            onClick={() => {
-              const iframe = document.frames
-                ? document.frames['charts']
-                : document.getElementById('charts');
-              printCharts(iframe);
-            }}
-          >
-            Print Charts
-          </button>
-          <iframe
-            id="charts"
-            src="./documentCharts"
-            style={{ display: 'none' }}
-            title="Charts"
-          />
+          <p>Move the school info to show here?</p>
         </div>
       </div>
     </header>

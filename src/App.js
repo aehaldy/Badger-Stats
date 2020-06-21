@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { fetchStats } from './store';
 
 //Components
-import {Navbar} from './components/navbar'
+import { Navbar } from './components/navbar'
 import { Dashboard } from './components/dashboard';
 
 function App() {
@@ -28,7 +28,9 @@ function App() {
         <p className="address">
           {city}, {state} {zip}
         </p>
-        <a href={`http://${schoolUrl}`}>{schoolUrl}</a>
+        <a href={`http://${schoolUrl}`} id="schoolUrl">
+          {schoolUrl}
+        </a>
       </div>
     </div>
   );
