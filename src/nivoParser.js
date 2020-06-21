@@ -28,11 +28,15 @@ export const parseData = obj => {
   for (let key in obj) {
     let value = (obj[key] * 100).toPrecision(2);
     if (value) {
+      let name = key
+        .split('_')
+        .map((e) => e.charAt(0).toUpperCase() + e.slice(1))
+        .join('\n');
       dataArr.push({
         //capialize and remove underscore
-        id: key,
-        label: key,
-        value: value,
+        id: name,
+        label: name,
+        value: parseFloat(value),
         // "color": colors[nextCol],
       });
     }
