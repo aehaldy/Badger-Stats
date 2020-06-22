@@ -2,6 +2,11 @@
 
 Badger-Stats is a data visualization page to display some of the most recent data about the University of Wisconsin-Madison. It access the dataset from a public API using Flask and renders a carousel of interactive visualization charts using Nivo and mobile-first development principles.
 
+### Deployed Site
+
+https://hidden-badger.herokuapp.com/
+Known issue: Carousel slider buttons are not rendering correctly on deployed version, but other funcitonalities appear to be working.
+
 ## How to run this project locally
 
 You must have Python3, Node and Yarn installed on your machine to run this project.
