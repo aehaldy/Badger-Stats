@@ -5,7 +5,8 @@ Badger-Stats is a data visualization page to display some of the most recent dat
 ### Deployed Site
 
 https://hidden-badger.herokuapp.com/
-Known issue: Carousel slider buttons are not rendering correctly on deployed version, but other funcitonalities appear to be working.
+
+Known issues with deployed version: Carousel slider buttons sometimes don't appear in Firefox. Mobile-resonsive rendering not working in Chrome.
 
 ## How to run this project locally
 
